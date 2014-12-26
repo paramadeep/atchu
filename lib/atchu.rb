@@ -15,6 +15,6 @@ module Atchu
   def generate_models
      tables = Connection.get.tables
      models = tables.map{|table| Model.for_table(table).build}
-     models.each{|model|ModelFileMaker.for_model(model).make}
+     models.each{|model|ModelFileMaker.new(model).make}
   end
 end

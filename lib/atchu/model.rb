@@ -1,4 +1,4 @@
-require "queries"
+require "atchu/queries"
 
 class Model 
   attr_accessor :table_name

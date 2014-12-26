@@ -1,5 +1,4 @@
 require "yaml"
-require "activerecord"
 
 module Atchu
   module Connection

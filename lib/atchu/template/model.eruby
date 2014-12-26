@@ -1,10 +1,10 @@
-class <%= model.class_name %> < ActiveRecord::Base
-  <% unless model.class_name == model.table_name %>
-    <%= "self.table_name = '#{model.table_name}'" -%>
+class <%= class_name %> < ActiveRecord::Base
+  <% unless class_name == table_name %>
+    <%= "self.table_name = '#{table_name}'" -%>
   <% end %>
 
-  <% unless "id" == model.primary_key || model.primary_key.nil? %>
-    <%= "self.primary_key = #{model.primary_key}" -%>
+  <% unless "id" == primary_key || primary_key.nil? %>
+    <%= "self.primary_key = #{primary_key}" -%>
   <% end %>
 
 end
