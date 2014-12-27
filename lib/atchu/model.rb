@@ -11,7 +11,7 @@ class Model
   end
 
   def class_name
-    table_name.classify
+    "#{table_name.classify}Db"
   end
 
   def file_name
