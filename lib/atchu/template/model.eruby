@@ -1,9 +1,7 @@
 class <%= class_name %> < ActiveRecord::Base
-  <% unless class_name == table_name %>
     <%= "self.table_name = '#{table_name}'" -%>
-  <% end %>
 
-  <% unless "id" == primary_key || primary_key.nil? %>
+  <% unless primary_key.blank? %>
     <%= "self.primary_key = #{primary_key}" -%>
   <% end %>
 

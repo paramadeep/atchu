@@ -5,15 +5,14 @@ require "atchu/model"
 module Atchu
   extend self
 
-  def load db_config
+  def for_db db_config
     Connection.connect db_config
-    generate_models
+    self
   end
 
-  private
-  def generate_models
+  def generate_models_at output_folder
      tables = Connection.get.tables
      models = tables.map{|table| Model.for_table(table)}
-     models.each{|model|ModelFileMaker.new(model).write_to "tmp"}
+     models.each{|model|ModelFileMaker.new(model).write_to output_folder}
   end
 end
