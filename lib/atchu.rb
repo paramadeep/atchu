@@ -2,8 +2,6 @@ require "atchu/connection"
 require "atchu/model_file_maker"
 require "atchu/model"
 
-binding.pry
-
 module Atchu
   extend self
 
