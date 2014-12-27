@@ -21,7 +21,7 @@ module Atchu
 
     def write_to_file output_path,file_content
       FileUtils.mkdir_p(output_path)
-      File.open(File.join(Dir.pwd,output_path, "#{model.class_file_name}.rb"), "w") { |file| file.write file_content }
+      File.open(File.join(Dir.pwd,output_path, "#{model.file_name}.rb"), "w") { |file| file.write file_content }
     end
 
   end

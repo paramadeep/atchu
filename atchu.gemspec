@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = 'atchu'
-  s.version = '0.0.2'
-  s.date = '2014-12-26'
+  s.version = '0.0.3'
+  s.date = '2014-12-27'
   s.summary = 'Reverse engineer DB with composite keys to Active Records'
   s.description = "Reverse engineer DB with composite keys to Active Records"
   s.authors = ["Deepak"]       

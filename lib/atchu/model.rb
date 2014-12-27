@@ -1,4 +1,5 @@
 require "atchu/queries"
+require "active_support/inflector"
 
 class Model 
   attr_accessor :table_name
@@ -10,11 +11,11 @@ class Model
   end
 
   def class_name
-    table_name.tableize.classify
+    table_name.classify
   end
 
-  def class_file_name
-    table_name.tableize.classify
+  def file_name
+    table_name.classify.underscore
   end
 
   def primary_key
