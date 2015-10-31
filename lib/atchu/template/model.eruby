@@ -1,8 +1,8 @@
 class <%= class_name %> < ActiveRecord::Base
-    <%= "self.table_name = '#{table_name}'" -%>
+  <%= "self.table_name = '#{table_name}'" -%>
 
   <% unless primary_key.blank? %>
-    <%= "self.primary_key = #{primary_key}" -%>
+  <%= "self.primary_key = #{primary_key}" -%>
   <% end %>
 
 end
