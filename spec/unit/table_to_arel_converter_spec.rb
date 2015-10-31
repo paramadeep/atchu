@@ -1,7 +1,7 @@
-describe Atchu::ModelFileMaker, 'ModelFileMaker' do
+describe Atchu::TableToArelConverter, 'TableToArelConverter' do
   before(:each) do
     @model = instance_double('Model', :table_name => 'table', :class_name => 'klass', :file_name => 'klass_file', :primary_key => [:id,:name])
-    @model_file = Atchu::ModelFileMaker.new(@model)
+    @model_file = Atchu::TableToArelConverter.new(@model)
   end
 
   it 'should create file for a model' do

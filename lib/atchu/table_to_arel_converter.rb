@@ -1,7 +1,7 @@
 require 'erubis'
 
 module Atchu 
-  class ModelFileMaker
+  class TableToArelConverter
 
     def initialize(input_model)
       @model = input_model
