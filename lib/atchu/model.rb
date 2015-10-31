@@ -1,10 +1,10 @@
-require "atchu/queries"
-require "active_support/inflector"
+require 'atchu/queries'
+require 'active_support/inflector'
 
 class Model 
   attr_accessor :table_name
 
-  def self.for_table table_name
+  def self.for_table(table_name)
     model = Model.new
     model.table_name = table_name
     model

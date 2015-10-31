@@ -5,7 +5,7 @@ module Atchu
   module Connection
     extend self
 
-    def connect yml_file
+    def connect(yml_file)
       return if yml_file.empty?
       if @connection.blank?
         ActiveRecord::Base.establish_connection(YAML.load_file(yml_file)[:db])
