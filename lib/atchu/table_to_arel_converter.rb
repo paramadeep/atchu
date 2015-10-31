@@ -1,10 +1,11 @@
 require 'erubis'
+require 'atchu/model'
 
 module Atchu 
   class TableToArelConverter
 
-    def initialize(input_model)
-      @model = input_model
+    def initialize(input_table)
+      @model = Model.for_table(input_table)
     end
 
     def write_to(output_folder)
