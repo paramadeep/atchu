@@ -1,5 +1,5 @@
-require "yaml"
-require "active_record"
+require 'yaml'
+require 'active_record'
 
 module Atchu
   module Connection
