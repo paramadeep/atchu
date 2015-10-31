@@ -11,7 +11,7 @@ module Atchu
   end
 
   def generate_models_at(output_folder)
-    Pathname.new(dir_path).children.each { |p| p.unlink }
+    Pathname.new(output_folder).children.each { |p| p.unlink }
     tables = Connection.get.tables
     models = tables.map { |table| Model.for_table(table) }
     models.each { |model| ModelFileMaker.new(model).write_to output_folder }
