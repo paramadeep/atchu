@@ -2,7 +2,7 @@ module Atchu
   module Queries 
     extend self
 
-    def primary_key table_name
+    def primary_key(table_name)
       sql = <<-SQL
 SELECT               
   pg_attribute.attname 
